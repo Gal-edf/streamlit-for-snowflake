@@ -43,7 +43,7 @@ def makeSankey(labels, parents):
 
 st.title("Hierarchical Data Charts")
 
-df = pd.read_csv("data/employees.csv", header=0).convert_dtypes()
+df = pd.read_csv("../data/employees.csv", header=0).convert_dtypes()
 #st.dataframe(df)
 
 labels, parents = df[df.columns[0]], df[df.columns[1]]

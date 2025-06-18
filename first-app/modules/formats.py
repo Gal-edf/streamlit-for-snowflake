@@ -1,6 +1,4 @@
-import json
 import pandas as pd
-import streamlit as st
 
 indent = '  '
 
@@ -113,22 +111,3 @@ def getPath(node, nodes, path=""):
         for child in node["children"]:
             nodes = getPath(child, nodes, path)
     return nodes
-
-
-st.title("Hierarchical Data Formats")
-df = pd.read_csv("data/employees.csv", header=0).convert_dtypes()
-tabs = st.tabs(["JSON Tree", "JSON", "XML", "YAML", "Path"])
-
-root = getJson(df)
-jsn = json.dumps(root, indent=2)
-tabs[0].json(jsn)
-tabs[1].code(jsn, language="json", line_numbers=True)
-
-xml = getXml(root)
-tabs[2].code(xml, language="xml", line_numbers=True)
-
-yaml = getYaml(root)
-tabs[3].code(yaml, language="yaml", line_numbers=True)
-
-jsn = json.dumps(getPath(root, []), indent=2)
-tabs[4].code(jsn, language="json", line_numbers=True)
