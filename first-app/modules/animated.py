@@ -1,7 +1,7 @@
 from pyvis.network import Network
 import os, json
-import formats as formats
-import utils as utils
+import modules.formats as formats
+import modules.utils as utils
 
 
 def makeCollapsibleTree(df):

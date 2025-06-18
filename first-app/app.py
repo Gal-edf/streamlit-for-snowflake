@@ -24,6 +24,7 @@ with st.sidebar:
         "Upload a CSV file", type=["csv"], accept_multiple_files=False)
 
     filename = utils.getFullPath("data/employees.csv")
+    print(filename)
     if uploaded_file is not None:
         filename = StringIO(uploaded_file.getvalue().decode("utf-8"))
 

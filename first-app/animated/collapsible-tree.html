@@ -27,65 +27,72 @@ let tree = d3.tree;
 let hierarchy = d3.hierarchy;
 let select = d3.select;
 let data = {
-    "name": "Steven King",
+    "name": "portfolio",
     "children": [
         {
-            "name": "Neena Kochhar",
+            "name": "Cash",
             "children": [
                 {
-                    "name": "Hermann Baer"
+                    "name": "CHF"
                 },
                 {
-                    "name": "Shelley Higgins"
+                    "name": "EUR"
                 },
                 {
-                    "name": "Nancy Greenberg",
+                    "name": "USD"
+                }
+            ]
+        },
+        {
+            "name": "Fixed Income",
+            "children": [
+                {
+                    "name": "Sov and Corp Bonds"
+                },
+                {
+                    "name": "Em Mkts Bonds"
+                },
+                {
+                    "name": "High Yield Bonds"
+                }
+            ]
+        },
+        {
+            "name": "Equities",
+            "children": [
+                {
+                    "name": "Switzerland"
+                },
+                {
+                    "name": "Euroland"
+                },
+                {
+                    "name": "Japan"
+                },
+                {
+                    "name": "Australia"
+                },
+                {
+                    "name": "Emerging Markets"
+                }
+            ]
+        },
+        {
+            "name": "Alternative Investments",
+            "children": [
+                {
+                    "name": "Real Estate",
                     "children": [
                         {
-                            "name": "Ismael Sciarra"
-                        },
-                        {
-                            "name": "Jose Manuel Urman"
-                        },
-                        {
-                            "name": "Luis Popp"
+                            "name": "Eurozone"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Lex De Haan",
-            "children": [
-                {
-                    "name": "Alexander Hunold",
-                    "children": [
-                        {
-                            "name": "Bruce Ernst"
-                        },
-                        {
-                            "name": "Valli Pataballa"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Den Raphaely",
-            "children": [
-                {
-                    "name": "Alexander Khoo"
                 },
                 {
-                    "name": "Shelli Baida"
-                }
-            ]
-        },
-        {
-            "name": "Adam Fripp",
-            "children": [
+                    "name": "Hedge Funds"
+                },
                 {
-                    "name": "Laura Bissot"
+                    "name": "Commodities"
                 }
             ]
         }
